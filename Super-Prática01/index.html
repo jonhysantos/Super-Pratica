@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super-Prática</title>
+    <link rel="stylesheet" href="Super-pratica.css">
+</head>
+<body>
+    <header>
+        <h1>Jonhy Alberto</h1>
+        <p>Desenvolvedor Front-end</p>
+    </header>
+    <section id="tabuada">
+        <div>
+            <h2>Digite um número para ver a sua tabuada</h2>
+            <p>
+                <label for="txtn">Número: </label>
+                <input type="number" name="txtn" id="txtn" placeholder="10">
+            </p>
+            <button>Ver tabuada</button>
+        </div>
+        <div class="res">
+            <select name="tabuada" id="seltab" size="10">
+
+            </select>
+        </div>
+    </section>
+    <section id="contador">
+        <div>
+            <h2>Contador</h2>
+            <p>
+                <label for="txti">Início: </label>
+                <input type="number" name="txti" id="txti">
+            </p>
+            <p>
+                <label for="txtf">Fim: </label>
+                <input type="number" name="txtf" id="txtf">
+            </p>
+            <p>
+                <label for="txtp">Passo: </label>
+                <input type="number" name="txtp" id="txtp">
+            </p>
+            <button id="button2">Contar</button>
+        </div>
+        <div class="res2">
+
+        </div>
+
+    </section>
+    <section id="verificador-idade">
+        <div>
+            <h2>Verificador de idade</h2>
+            <p>
+                <label for="txtano">Nascimento: </label>
+                <input type="number" name="txtano" id="txtano" placeholder="2007">
+            </p>
+            <h2>Sexo:</h2>
+            <p>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="mas">
+            </p>
+            <p>
+                <label for="fem">Feminino</label>
+                <input type="radio" name="radsex" id="fem" checked>
+            </p>
+            <p>
+                <label for="out">Outro: </label>
+                <input type="radio" name="radsex" id="out">
+                <input type="text" name="radsex"
+                 id="out2" >
+            </p>
+            <button id="button3">Verificar</button>
+        </div>
+        <div class="res3">
+
+        </div>
+
+    </section>
+    <footer>
+        <p>Criado e desenvolvido por Jonhy Alberto</p>
+    </footer>
+</body>
+<script src="tabuada.js"></script>
+
+</html>
