@@ -52,6 +52,7 @@ function contar(){
         passo.style.border = '3px solid red'
         window.alert('Favor preencher todos os campos')
     }else{
+        res2.innerHTML = ''
         res2.style.display = 'block'
         let i = Number(inicio.value)
         let f = Number(fim.value)
