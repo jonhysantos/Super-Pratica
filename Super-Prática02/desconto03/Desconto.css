@@ -18,51 +18,54 @@ body header{
     margin-bottom: 20px;
 }
 
-body div{
+body section div{
     background-color: deeppink;
     color: white;
     padding: 15px;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.402);
 }
 
-body div h2{
-    margin-top: 15px;
+body section div h2{
+    margin-bottom: 15px;
 }
 
-body div p{
+body section div p{
     margin: 5px;
     padding: 5px;
+
 }
 
-body div input#txtn{
-    width: 80px;
-    font-size: 1.3em;
+body section div p label{
+    font-size: 1.4em;
+}
+
+body section div p input#txtp{
+    width: 100px;
+    font-size: 1.4em;
     text-align: center;
 }
 
-body div select#lista{
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-}
-
-body div p label{
+body section div p input#txtd{
+    width: 70px;
     font-size: 1.4em;
+    text-align: center;
 }
 
-body div input.button{
+body section div input#button{
     width: 150px;
-    height: 22px;
+    font-size: 1em;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 28px;
 }
 
-body div#res{
+body section div#res{
     display: none;
 }
 
-body div#res p{
-    font-size: 1.4em;
+body section  div#res p{
+    font-size: 1.5em;
 }
 
 body footer{

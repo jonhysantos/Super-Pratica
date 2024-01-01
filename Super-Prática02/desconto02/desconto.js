@@ -29,9 +29,13 @@ function verDesconto(){
         let preçoFinal = preçoProduto - desconto
 
         // Exibe o resultado na tela
-        res.innerHTML = `<p> Preço ${preçoProduto} Reais </p>`
-        res.innerHTML += `<p>Desconto R$ -:${desconto} Reais </p>`
-        res.innerHTML += `<p>Preço final ${preçoFinal} Reais</p>`
+        res.innerHTML = `<p> Preço ${preçoProduto.toLocaleString('pt-BR',{style: 'currency',currency: 'BRL'})} </p>`
+        res.innerHTML += `<p>Desconto: - ${desconto.toLocaleString('pt-BR',{style:'currency',currency: 'BRL'})} </p>`
+        res.innerHTML += `<p>Preço final ${preçoFinal.toLocaleString('pt-BR',{style:'currency',currency: 'BRL'})} </p>`
+        res.innerHTML += `<p>${porcentagemDesconto.value}% Off </p>`
 
     }
+    preço.value = ''
+    porcentagemDesconto.value = ''
+    preço.focus()
 }

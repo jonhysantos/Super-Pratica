@@ -66,6 +66,7 @@ function analisar(){
             menor = valores[pos]
         }
         media = soma / total
+        res.style.display = 'block'
         res.innerHTML = ''
         res.innerHTML += `<p> Ao todo temos ${total} números casastrados</p>`
         res.innerHTML += `<p> Maior valor ${maior}`
