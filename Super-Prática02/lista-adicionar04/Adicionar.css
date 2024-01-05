@@ -57,7 +57,7 @@ body section div#res p{
     font-size: 1.5em;
 }
 
-input.button{
+input.button,.button2{
     width: 150px;
     font-size: 1.3em;
 }
