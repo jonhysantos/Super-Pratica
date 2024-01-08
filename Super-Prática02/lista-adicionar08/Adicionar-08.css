@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    color: white;
+}
+
+body header{
+    background-color: dodgerblue;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
+
+body section div{
+    background-color: deeppink;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.422);
+}
+
+body section div h2{
+    margin-bottom: 20px;
+}
+
+body section div p,label{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+body section div p label{
+    font-size: 1.3em;
+}
+
+body section div p input#txtn{
+    width: 80px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+body section div p select#lista{
+    width: 250px;
+    padding: 10px;
+    font-size: 1.4em;
+}
+
+body section div p input.button,.button2{
+    width: 100px;
+    margin-top: 30px;
+    height: 27px;
+    font-size: 1em;
+}
+
+body section div#res p{
+    font-size: 1.4em;
+    
+}
+
+body footer{
+    background-color: dodgerblue;
+    padding: 3px;
+}
