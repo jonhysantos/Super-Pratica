@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos-junstos</title>
+    <link rel="stylesheet" href="Todos-juntos.css">
+</head>
+<body>
+    <header>
+        <h1>Jonhy Alberto.</h1>
+        <p>Desenvolvedor Front-end.</p>
+    </header>
+    <!--Verificador de idade. -->
+    <section>
+        <div>
+            <h2>Verificador de idade.</h2>
+            <p>
+                <label for="txtnasc">Ano de nascimento: </label>
+                <input type="number" name="txtnasc" id="txtnasc" placeholder="2007">
+            </p>
+            <p>Sexo:</p>
+            <p>
+                <label for="fem">Feminino.</label>
+                <input type="radio" name="radsex" id="fem" checked>
+            </p>
+            <p>
+                <label for="mas">Masculino.</label>
+                <input type="radio" name="radsex" id="mas">
+            </p>
+            <p>
+                <label for="outro">Outro:</label>
+                <input type="radio" name="radsex" id="outro">
+                <input type="text" name="radsex" id="out" placeholder="Cono deseja ser chamado">
+            </p>
+            <p>
+                <input type="button" class="button" value="Verificar">
+            </p>
+        </div>
+        <div class="res">
+
+        </div>
+    </section>
+    <!--Contador -->
+    <section>
+        <div>
+            <h2>Preencha os campos para contar.</h2>
+            <p>
+                <label for="txti">Início: </label>
+                <input type="number" name="txti" id="txti">
+            </p>
+            <p>
+                <label for="txtf">Fim: </label>
+                <input type="number" name="txti" id="txtf">
+            </p>
+            <p>
+                <label for="txtp">Passo: </label>
+                <input type="number" name="txtp" id="txtp">
+            </p>
+            <p>
+                <input type="button" class="button2" value="Contar">
+            </p>
+        </div>
+        <div class="res2">
+
+        </div>
+    </section>
+    <!-- Tabuada. -->
+    <section>
+        <div>
+            <h2>Digite um número para ver a sua tabuada.</h2>
+            <p>
+                <label for="txtn">Número: </label>
+                <input type="number" name="txtn" id="txtn">
+            </p>
+            <p>
+                <input type="button" class="button3" value="Ver tabuada">
+            </p>
+        </div>
+        <div class="res3">
+            <select name="tabuada" id="seltab" size="10"></select>
+        </div>
+    </section>
+    <footer>
+        <p>Criado e desenvolvido por Jonhy Alberto.</p>
+    </footer>
+</body>
+<script src="todos-juntos.js"></script>
+</html>
