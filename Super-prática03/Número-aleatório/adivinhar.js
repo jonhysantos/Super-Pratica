@@ -8,7 +8,7 @@
  // Loop para adivinhar o númreo.
  for(tentativas = 1;tentativas <= maxTentativas;tentativas ++){
     const palpite = parseInt(prompt(`Tentativas ${tentativas} / ${maxTentativas}. Adivinhe o número(entre 1 e 100):`))
-    if(isNaN(palpite) || palpite < 1 && palpite > 100){
+    if(isNaN(palpite) || palpite < 1 || palpite > 100){
         window.alert('Por favor, insira um número válido entre 1 e 100.')
         tentativas --
     }else if(palpite === numeroAleatorio){
