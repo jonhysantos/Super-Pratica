@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    color: white;
+}
+
+body header{
+    background-color: dodgerblue;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+body section div{
+    background-color: deeppink;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.391);
+}
+
+body section div h2{
+    margin-bottom: 20px;
+
+}
+
+body section div p{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+body section div p label{
+    font-size: 1.5em;
+
+}
+
+body section div p input#txtn{
+    width: 100px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+body section div p input#button,#button2{
+    width: 150px;
+    height: 30px;
+    font-size: 1em;
+}
+
+body section div p select#lista{
+    width: 300px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+}
+
+body section div#res p{
+    font-size: 1.4em;
+}
+
+body footer{
+    background-color: dodgerblue;
+    padding: 3px;
+}
