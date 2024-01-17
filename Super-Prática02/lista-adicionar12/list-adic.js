@@ -2,10 +2,10 @@ let num = document.querySelector('#txtn')
 let lista = document.querySelector('#lista')
 let res = document.querySelector('#res')
 let valores = []
-let button = document.querySelector('#button')
-let button2 = document.querySelector('#button2')
+let btn = document.querySelector('#btn')
+let btn2 = document.querySelector('#btn2')
 
-// Verificar se é um número e se está entre 1 e 100.
+// Verificar se é número e se está em entre 1 e 100.
 function isNumero(n){
     if(Number(n) >= 1 && Number(n) <= 100){
         return true
@@ -24,32 +24,33 @@ function inLista(n,l){
 }
 
 // Ação do botão.
-button.addEventListener('click',adicionar)
+btn.addEventListener('click',adicionar)
 
 // Função da ação.
 function adicionar(){
     if(isNumero(num.value) && !inLista(num.value,valores)){
         valores.push(Number(num.value))
         let item = document.createElement('option')
-        item.text = `Valore ${num.value} adicionado. `
+        item.text = `Valor ${num.value} adicionado.`
         lista.appendChild(item)
+        res.innerHTML = '/88888888888888888888m,+*'
     }else{
-        window.alert('Por favor, insira um número válido ou número já adiconado a lista.')
+        window.alert('Por favor, insira números válidos entre 1 e 100')
     }
     num.value = ''
     num.focus()
 }
 
-// Função finalizar //
-
-// Ação do botão.
-button2.addEventListener('click',finalizar)
+// Ação do botão finalizar.
+btn2.addEventListener('click',finalizar)
 
 // Função da ação.
 function finalizar(){
     if(valores.length == 0){
-        window.alert('Por favor, adicione valores antes de finalizar.')
+        window.alert('Por Favor, adicione valores antes de finalizar.')
     }else{
+        res.style.display = 'block'
+        
         let total = valores.length
         let maior = valores[0]
         let menor = valores[0]
@@ -57,18 +58,18 @@ function finalizar(){
         let media = 0
         for(let pos in valores){
             soma += valores[pos]
-           if(valores[pos] > maior)
+            if(valores[pos] > maior)
             maior = valores[pos]
             if(valores[pos] < menor)
             menor = valores[pos]
         }
         media = soma / total
         res.innerHTML = ''
-        res.innerHTML += `<p>Ao todo, temos ${total} números cadastrado.</p>`
-        res.innerHTML += `<p>O maior valor informado ${maior}.</p>`
-        res.innerHTML += `<p>O menor valor informado ${menor}.</p>`
-        res.innerHTML += `<p>A soma de todos os valores ${soma}.</p>`
-        res.innerHTML += `<p>A media de ${total} números cadastrado é ${media}.</p>`
-        
+        res.innerHTML = `<p>Ao todo temos ${total} números cadastrado.</p>`
+        res.innerHTML += `<p>O maior valor informado ${maior} </p>`
+        res.innerHTML += `<p>O menor valor informado ${menor} </p>`
+        res.innerHTML += `<p>Somando todos os valores temos ${soma} </p>`
+        res.innerHTML += `<p>A média é ${media} </p>`
+        res.innerHTML += `<p> </p>`
     }
 }
