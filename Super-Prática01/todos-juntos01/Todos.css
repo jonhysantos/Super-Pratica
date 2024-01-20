@@ -44,10 +44,11 @@ body section div p input#txtn,input#txti,input#txtf,input#txtp,input#txtnas{
     text-align: center;
 }
 
-body section div input.button,.button2,.button3{
+body section div p input.button,.button2,.button3{
     width: 150px;
     height: 30px;
     margin-top: 30px;
+    font-size: 1em;
 }
 
 
