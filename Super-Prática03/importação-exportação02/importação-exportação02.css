@@ -56,6 +56,10 @@ body section div input#button{
     font-size: 1em;
 }
 
+body section div#res{
+    display: none;
+}
+
 body section div#res p {
     font-size: 1.5em;
 }
