@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imp-exp06</title>
-    <link rel="stylesheet" href="../importação-exportação02/importação-exportação02.css">
+    <title>Lista-adicionar14.</title>
+    <link rel="stylesheet" href="../lista-adicionar12/list-adic.css">
 </head>
 <body>
     <header>
@@ -13,13 +13,19 @@
     </header>
     <section>
         <div>
-            <h2>Calcule do dobro de um número:</h2>
+            <h2>Adicione números a lista (entre 1 e 100).</h2>
             <p>
                 <label for="txtn">Número: </label>
                 <input type="number" name="txtn" id="txtn">
+                <input type="button" id="btn" value="Adicionar">
             </p>
             <p>
-                <input type="button" id="button" value="Calcular">
+                <h2>Números adicionados.</h2>
+                <select name="lista" id="lista" size="6"></select>
+            </p>
+            <p>
+                <h2>Ao adicionar clique em finalizar para ver o resultado</h2>
+                <input type="button" id="btn2" value="Finalizar">
             </p>
         </div>
         <div id="res">
@@ -30,5 +36,5 @@
         <p>Criado e desenvolvido por Jonhy Alberto.</p>
     </footer>
 </body>
-<script type="module" src="main06.js"></script>
+<script src="lis-adi14.js"></script>
 </html>
