@@ -11,8 +11,10 @@ for(tentativas = 1; tentativas <= maxTentativas; tentativas ++){
     const palpite = Number(prompt(`Tentativas ${tentativas} / ${maxTentativas}. Adivinhe o número (entre 1 e 100).`))
     if(isNaN(palpite) || palpite < 1 || palpite > 100){
         window.alert(`Por favor, insira um núero entre 1 e 100`)
+        tentativas --
     }else if(palpite === numeroAleatorio){
         window.alert(`Parabéns! você acertou o número ${numeroAleatorio} em ${tentativas} tentativas.`)
+        break;
     }else if(palpite < numeroAleatorio){
         window.alert('Tente um número maior')
     }else{
