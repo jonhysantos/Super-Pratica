@@ -2,7 +2,7 @@
 import {calcularDiasRestantesParaAniversario,calcularIdade} from './Funções.js'
 
 // Solicite a data para o usuário.
-const dataNascimento =  prompt('Digite sua data de nascimento (AAAA-MM-DD')
+const dataNascimento = prompt('Digite sua data de nascimento (AAAA-MM-DD')
 
 // Executa as funções.
 const idade = calcularIdade(dataNascimento)

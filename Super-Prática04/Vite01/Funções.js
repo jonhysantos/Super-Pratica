@@ -7,7 +7,6 @@ export function calcularIdade(dataNascimento){
     // Calcula a diferença entre elas e retorna no formato 'year'
     const idade = hoje.diff(nascimento,'year')
     return idade
-
 }
 
 export function calcularDiasRestantesParaAniversario (dataNascimento){

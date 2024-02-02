@@ -16,7 +16,7 @@ function isNumero(n){
 
 // Verificar se já consta em lista.
 function inLista(n,l){
-    if(l.indexOf(Number(n)) !== -1){
+    if(l.indexOf(Number(n)) != -1){
         return true
     }else{
         return false
