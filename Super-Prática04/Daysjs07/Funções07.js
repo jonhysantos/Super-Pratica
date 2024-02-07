@@ -1,6 +1,5 @@
 import dayjs from 'dayjs'
 
-
 export function calcularIdade(dataNascimento){
     // Salva a data de hoje e a de nascimento no formato dayjs
     const hoje = dayjs()
@@ -25,9 +24,7 @@ export function calcularDiasRestantesParaAniversario(dataNascimento){
     }
     console.log(proximoAniversario,hoje)
 
-    // Calcula a diferença e retorna na unidade day.
+    // Calcula a diferença entre elas e retorna na unidade day.
     const diaRestantes = proximoAniversario.diff(hoje,'day')
     return diaRestantes
-
-
 }
