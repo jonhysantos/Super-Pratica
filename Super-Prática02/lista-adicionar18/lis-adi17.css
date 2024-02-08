@@ -49,7 +49,7 @@ body section div p input#txtn{
     border: none;
 }
 
-body section div p select#lista{
+#lista{
     width: 250px;
     font-size: 1.4em;
     border-radius: 15px;
