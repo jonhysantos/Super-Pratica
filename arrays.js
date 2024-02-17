@@ -36,9 +36,17 @@ console.log(slice)
 
 lista2.splice(2,2,'Pessego')
 console.log(lista2)
-*/
+
 
 let numeros = [10,3,6,4,32,9]
 numeros.forEach(function (elementoAtual,indiceAtual,arrayCompleto) {
     console.log(`O elemento no indice ${indiceAtual} é ${elementoAtual} e o array completo é ${arrayCompleto}`)
 })
+*/
+
+const numeros = [2,5,4,8,6,9,10,12,7,5,3]
+const pares = numeros.filter(function (elementoAtual){
+    return elementoAtual %2 == 0
+})
+
+console.log(numeros,pares)
