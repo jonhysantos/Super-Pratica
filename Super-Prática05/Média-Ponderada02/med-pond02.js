@@ -14,7 +14,7 @@ while (true) {
     }
 
     const peso = parseFloat(prompt(`Digite o peso para o número ${numero}:`))
-    if (isNaN(pesos)) {
+    if (isNaN(peso)) {
         window.alert('Por favor, insira um peso válido.')
     } else {
         numeros.push(numero)
