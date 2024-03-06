@@ -2,6 +2,7 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+import { calcularDiasRestantes, calcularIdade } from './funções23.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -20,5 +21,12 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
+
+const dataNascimento = prompt('Digite sua data de nascimento (AAAA-MM-DD)')
+
+const idade = calcularIdade(dataNascimento)
+const diasRestantes = calcularDiasRestantes(dataNascimento)
+
+alert(`Vocẽ tem ${idade} anos e restam ${diasRestantes} dias para o seu aniversário.`)
 
 setupCounter(document.querySelector('#counter'))
