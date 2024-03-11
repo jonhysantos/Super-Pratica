@@ -40,3 +40,26 @@ function adicionar(){
 
 
 btn2.addEventListener('click',finalizar)
+
+function finalizar(){
+    let total = valores.length
+    let maior = valores[0]
+    let menor = valores[0]
+    let soma = 0
+    let media = 0
+    for(let pos in valores){
+        soma += valores[pos]
+        if(valores[pos] > maior)
+        maior = valores[pos]
+        if(valores[pos] < menor)
+        menor = valores[pos]
+    }
+    res.style.display = 'block'
+    media = soma / total
+    res.innerHTML = `<p>No total temos ${total} números cadastrados.</p>`
+    res.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
+    res.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
+    res.innerHTML += `<p>Somando todos os valores temos ${soma}</p>`
+    res.innerHTML += `<p>A média é ${media.toFixed(2)}</p>`
+
+}
