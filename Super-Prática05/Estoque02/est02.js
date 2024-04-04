@@ -31,7 +31,7 @@ function listarItens(){
 function alterarQuantidade(){
     listarItens()
     const indice = parseInt(prompt('Digite o número do item que deseja alterar:')) -1
-    if(isNaN(indice) || indice < 0 || indice > estoque.length ){
+    if(isNaN(indice) || indice < 0 || indice > estoque.length){
         alert('Número de item inválido.')
         return
     }

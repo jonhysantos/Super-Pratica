@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body header {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+body section div h2 {
+    margin-bottom: 10px;
+}
+
+body section div {
+    background-color: #ff1493;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.28);
+    filter: drop-shadow(0 0 2em #ff1493);
+}
+
+body section div p {
+    margin: 5px;
+    padding: 5px;
+}
+
+body section div p select#lista {
+    width: 250px;
+    padding: 10px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 1.4em;
+}
+
+body section div p #btn,#btn2 {
+    width: 150px;
+    height: 22px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+body footer {
+    background-color: dodgerblue;
+    color: white;
+    padding: 2px;
+}
