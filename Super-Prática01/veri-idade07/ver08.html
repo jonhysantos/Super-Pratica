@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ver08.css">
+    <title>Verificador de idade.</title>
+</head>
+<body>
+    <header>
+        <h1>Jonhy Alberto</h1>
+        <p>Desenvolvedor Front-end</p>
+    </header>
+    <section>
+        <div>
+            <h2>Verificador de idade.</h2>
+            <p>
+                <label for="txtano">Ano de nascimento:</label>
+                <input type="number" name="txtano" id="txtano" maxlength="4">
+            </p>
+            <h2>Sexo</h2>
+            <p>
+                <label for="fem">Feminino: </label>
+                <input type="radio" checked name="sex" id="fem">
+            </p>
+            <p>
+                <label for="mas">Masculino: </label>
+                <input type="radio" name="sex" id="mas">
+            </p>
+            <p>
+                <label for="out"  >Outro:</label>
+                <input  type="radio" name="sex" id="out" >
+            </p>
+            <p >
+                <label for="identifica">Como você se identifica:</label>
+                <input class="hide" type="text"  name="sex" id="identifica">
+            </p>
+            <p>
+                <input type="button" id="btn" value="Verificar">
+            </p>
+        </div>
+        <div id="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>Criado e desenvolvido por Jonhy Alberto
+        </p>
+    </footer>
+    <script type="module" src="ver08.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+body header h1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* config a caixa container pra ficar no formato farol*/
+body div#container { 
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50px;
+    height: 150px;
+    background-color: black;
+    border-radius: 15px;
+}
+
+/*border radius nas filhas para arrendondar*/
+body div#container div.red,.yellow,.green {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+body div#container div.red,.yellow,.green {
+    background-color: white;
+
+}
