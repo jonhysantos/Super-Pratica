@@ -5,65 +5,65 @@ function cadastrarItem(){
     const quantidade = parseInt(prompt('Digite a quantidade do item:'))
 
     if(isNaN(quantidade) || quantidade <= 0){
-        alert('Quantidade inválida,item não cadastrado.')
+        alert('Quantidade inválida, item não cadastrado.')
         return
     }
 
-    // Mesmo que {nome,quantidade}
+    // Mesmo que {nome:nome,quantidade:quantidade}
     const item = {nome,quantidade}
     estoque.push(item)
-    alert(`${nome} foi cadastrado no estoque com ${quantidade} unidades.`)
+    alert(`${nome} foi cadastrado com ${quantidade} unidades.`)
 }
 
 function listarItens(){
     if(estoque.length === 0){
-        alert('O estoque está vazio.')
+        alert('O estoqu está vazio.')
         return
     }
 
-    // Tramsforma uma lista de objetos em uma lista de strings e depois junta tudo.
+    // Transforma uma lista de objetos em uma lista de strings.
     const itensStrings = estoque.map(function(item,index){
-        return `${index +1}. ${item.nome}: ${item.quantidade} unidades.`
+        return `${index + 1}. ${item.nome}: ${item.quantidade} unidades`
     }).join('\n')
-    alert(`Itens no estoque.\n${itensStrings}`)
+
+    alert(`Itens no estoque.\n${itensStrings}.`)
 }
 
 function alterarQuantidade(){
     listarItens()
+    const indice = parseInt(prompt('Digite o número do item que deseja alterar a quantidade:')) -1
 
-    const indice = parseInt(prompt('Digite o número do item que deseja alterar:')) -1
     if(isNaN(indice) || indice < 0 || indice > estoque.length){
-        alert('Número inválido, item não alterado.')
+        alert('Número do item inválido, item não alterado.')
         return
     }
 
-    const novaQuantidade = parseInt(prompt(`Digite a nova quantidade para "${estoque[indice].nome}":`))
+    const novaQuantidade = parseInt(prompt(`Digite a nova quantidade para "${estoque[indice].nome}"`)) 
 
     if(isNaN(novaQuantidade) || novaQuantidade <= 0){
-        alert('Quantidade inválida, item não alterado.')
+        alert('Quantidade inválida')
         return
     }
 
     estoque[indice].quantidade = novaQuantidade
-    alert(`${estoque[indice].nome} agora possui ${novaQuantidade} unidades.`)
+    alert(`"${estoque[indice].nome}" agora possui ${novaQuantidade}`)
 }
 
-function exlcuirItem(){
+function excluirItem(){
     listarItens()
-    
-    const indice = parseInt(prompt('Digite o número do item que deseja alterar a quantidade:')) -1
+    const indice = parseInt(prompt('Digite o número do item que deseja excluir:')) -1
 
     if(isNaN(indice) || indice < 0 || indice > estoque.length){
-        alert('Número inválido, pois essa opção não exite.')
+        alert('Número do item inválido, verifique e tente novamente')
         return
     }
 
-    const nomeItemExcluido = estoque[indice].nome
+    const nomeItemExcluído = estoque[indice].nome
     estoque.splice(indice,1)
-    alert(`"${nomeItemExcluido}" foi excluído do estoque.`)
+    alert(`"${nomeItemExcluído}" foi excluído do estoque.`)
 }
 
-let escolha
+let escolha 
 
 while(escolha !== "5"){
     escolha = prompt(`Escolha uma opção:\n1.Cadastrar item.\n2.Listar itens.\n3.Alterar quantidade.\n4.Excluir item.\n5.Sair.`)
@@ -79,12 +79,12 @@ while(escolha !== "5"){
             alterarQuantidade()
             break
         case "4":
-            exlcuirItem()
+            excluirItem()
             break
         case "5":
-            alert('Saindo do program de gerenciamento de estoque...')
+            alert(`Saindo do programa de gerenciamento de estoque...`)
             break
         default:
-            alert('Opção inválida,tente novamente.')
+            alert(`Opção inválida,tente novamente.`)
     }
 }
