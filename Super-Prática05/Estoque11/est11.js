@@ -28,11 +28,43 @@ function listaItens(){
     alert(`Itens no estoque.\n${itensStrings}.`)
 }
 
+function alterarQuantidade(){
+    const indice = parseInt(prompt('Digite o número do item que deseja alterar:')) -1
+
+    if(isNaN(indice) || indice < 0 || indice >= estoque.length){
+        alert('Número inválido, tente novamente.')
+        return
+    }
+
+    const novaQuantidade = parseInt(prompt('Digite a nova quantidade:'))
+
+    if(isNaN(novaQuantidade) || novaQuantidade <= 0){
+        alert('Quantidade inválida, item não alterado.')
+        return
+    }
+
+    estoque[indice].quantidade = novaQuantidade
+    alert(`"${estoque[indice].nome}" agora possui ${novaQuantidade}`)
+}
+
+function excluirItem(){
+    const indice = parseInt(prompt('Digite o número do item que deseja excluir:'))
+
+    if(isNaN(indice) || indice < 0 || indice <= estoque.length){
+        alert('Número inválido.ou não existente.')
+        return
+    }
+
+    const nomeItemExcluido = estoque[indice].nome
+    estoque.splice(indice,1)
+    alert(`"${nomeItemExcluido}" foi excluído do estoque.`)
+}
+
 let escolha 
 
 while(escolha !== "5"){
 
-    escolha = prompt(`Escolha uma opção:\n1.Cadastrar item.\n2.Listar itens.\n5.Sair.`)
+    escolha = prompt(`Escolha uma opção:\n1.Cadastrar item.\n2.Listar itens.\n3.Alterar quantidade.\n4.Excluir item.\n5.Sair.`)
 
     switch(escolha){
         case "1":
@@ -41,7 +73,12 @@ while(escolha !== "5"){
         case "2":
             listaItens()
             break
-        
+        case "3":
+            alterarQuantidade()
+            break
+        case "4":
+            excluirItem()
+            break
         case "5":
             alert('Saindo do programa de gerenciamento de estoque...')
             break
