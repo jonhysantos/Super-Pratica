@@ -2,7 +2,8 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import {caluclarIdade, calcularDiasRestantes } from './funcoes37.js'
+import { caluclarDiasRestantes, caluclarIdade } from '../Dayjs36/funcoes36.js'
+
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,11 +22,16 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
+// Solicita a data de nascimento ao usuário no formato (AAAA-MM-DD)
 const dataNascimento = prompt('Digite a data de nascimento no formato (AAAA-MM-DD):')
 
+// Calcula a idade nas funcoes externas
 const idade = caluclarIdade(dataNascimento)
-const diasRestante = calcularDiasRestantes(dataNascimento)
 
-alert(`Você tem ${idade} anos e restam ${diasRestante} dias para o seu aniversário.`)
+// calcula os dias restantes com a funçoes externas
+const diasRestantes = caluclarDiasRestantes(dataNascimento)
+
+// Mostra o resultado na tela.
+alert(`Você tem ${idade} anos e restam ${diasRestantes} dias para o seu aniversário.`)
 
 setupCounter(document.querySelector('#counter'))
