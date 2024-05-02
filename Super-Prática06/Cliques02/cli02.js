@@ -1,16 +1,13 @@
-// Obtém o elemento de parágrafo e o botão.
+// Obtem o item do paragrafo.
 const contadorParagrafo = document.getElementById('contadorParagrafo')
 
-const botaoClicar = document.getElementById("botaoClicar")
+// Obtem o item do botao
+const botaoContador = document.getElementById('botaoClicar')
 
 let contadorCliques = 0;
 
-// Adiciona um ouvinte de evento no botao.
-botaoClicar.addEventListener('click',function(){
-    contadorCliques ++;
-    contadorParagrafo.textContent = `${contadorCliques} cliques${contadorCliques !== -1 ? "s" : ""}`;
-
-});
-
-// Operador ternário.
-// condição ? Valor_caso_verdadeiro : Valor_caso_falso
+// Adiciona um evento de ouvinte (listener)
+botaoContador.addEventListener('click',function() {
+    contadorCliques ++
+    contadorParagrafo.textContent = `${contadorCliques} Clique${contadorCliques !== 1 ? "s" : ""}`
+})
