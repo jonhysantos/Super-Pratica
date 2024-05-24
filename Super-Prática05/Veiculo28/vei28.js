@@ -12,6 +12,7 @@ const veiculo = {
             this.velocidade -= desaceleracao
             alert(`A velocidade foi diminuída para ${this.velocidade}`)
         }else{
+            this.velocidade = 0
             alert(`O veículo está parado.`)
         }
     },
