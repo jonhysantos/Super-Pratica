@@ -31,7 +31,7 @@ function listarItens(){
 function alterarQuantidade(){
     listarItens()
     const indice = parseInt(prompt('Digite o número do item que deseja alterar:')) -1
-    if(isNaN(indice) || indice < 0 || indice > estoque.length){
+    if(isNaN(indice) || indice < 0 || indice >= estoque.length){
         window.alert('Número de item inválido.')
         return
     }
@@ -50,9 +50,11 @@ function alterarQuantidade(){
 function excluirItem(){
     listarItens()
     
-    const indice = parseInt(prompt(`Digite o número do item que deseja excluir:`)) -1
-    if(isNaN(indice) || indice < 0 || indice > estoque.length){
+    const indice = parseInt(prompt(`Digite o número do item que deseja excluir:`))-1
+    
+    if(isNaN(indice) || indice < 0 || indice >= estoque.length){
         window.alert('Número de item inválido.')
+        return
     }
 
     const nomeItemExcluido = estoque[indice].nome
