@@ -16,6 +16,7 @@ body header {
 }
 
 body section div {
+    font-size: 2em;
     background-color: #ff1493;
     color: white;
     padding: 14px;
