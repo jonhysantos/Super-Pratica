@@ -42,7 +42,7 @@ body section div p input#txtn{
     text-align: center;
 }
 
-body section div p input#btn{
+body section div p #btn{
     width: 150px;
     height: 25px;
     font-size: 1em;
@@ -53,7 +53,7 @@ body section div#res{
     display: none;
 }
 
-body section div#res select#seltab{
+body section div#res select#tab{
     width: 300px;
     padding: 10px;
     background-color: dodgerblue;
