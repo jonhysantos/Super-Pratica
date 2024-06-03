@@ -34,7 +34,7 @@ body section div p input#txtn {
     width: 80px;
 }
 
-body section div p input#btn {
+body section div p #btn {
     width: 150px;
 
 }

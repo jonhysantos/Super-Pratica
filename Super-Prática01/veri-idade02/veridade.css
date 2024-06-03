@@ -24,6 +24,7 @@ body section div{
     margin: 20px;
     border-radius: 10px;
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.409);
+    filter: drop-shadow(0 0 2em green);
 }
 body section div p{
     margin: 5px;
