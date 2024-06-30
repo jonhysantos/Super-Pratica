@@ -29,7 +29,7 @@ body section div h1,p{
     padding: 5px;
 }
 
-body section div select {
+body section div p select {
     width: 250px;
     font-size: 1.3em;
 }
