@@ -3,7 +3,7 @@ function toKebabCase(str){
 }
 
 function removerLi(id){
-    const liParaRemover = document.getElementById('id');
+    const liParaRemover = document.getElementById(id);
     liParaRemover.remove()
 }
 
