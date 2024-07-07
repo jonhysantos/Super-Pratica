@@ -17,8 +17,8 @@ function adicionarLi(jogo){
 
 const form = document.getElementById('cadastrarJogo');
 
-form.addEventListener('submit',function(event){
-    event.preventDefault()
+form.addEventListener('submit',function(evento){
+    evento.preventDefault()
     const inputNome = document.getElementById('nome');
     const inputAno = document.getElementById('ano');
     const inputGenero = document.getElementById('genero');
@@ -30,5 +30,5 @@ form.addEventListener('submit',function(event){
     jogo.genero = inputGenero.value
     adicionarLi(jogo)
 
-    event.target.reset()
+    evento.target.reset()
 })

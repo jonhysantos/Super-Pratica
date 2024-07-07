@@ -5,16 +5,13 @@ function toKebabCase(str){
 function adicionarLi(jogo){
     const liElement = document.createElement('li')
     liElement.id = toKebabCase(jogo.nome)
-    liElement.innerHTML = `Nome: ${jogo.nome} <br> Ano de lançamento: ${jogo.ano} <br> Gênero: ${jogo.genero}`
-
+    liElement.innerHTML = `Nome: ${jogo.nome} <br> Ano de lançamento ${jogo.nome} <br> Gênero ${jogo.genero}`
     document.getElementById('listaDeJogos').appendChild(liElement)
 }
 
 const form = document.getElementById('cadastroJogos')
-
 form.addEventListener('submit',function(evento){
     evento.preventDefault()
-
     const inputNome = document.getElementById('inputNome')
     const inputAno = document.getElementById('inputAno')
     const inputGenero = document.getElementById('inputGenero')
