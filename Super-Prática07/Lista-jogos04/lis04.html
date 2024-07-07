@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de jogos</title>
+    <link rel="stylesheet" href="../Lista-jogos01/lis02.css">
+</head>
+<body>
+    <header>
+        <h1>Jonhy Alberto</h1>
+        <p>Desenovolvedor Front-end</p>
+    </header>
+    <section>
+        <div>
+            <h2>Lista de Jogos</h2>
+            <form id="formJogos">
+                <p>
+                 <label for="inputNome">Nome:</label>
+                <input type="text" name="inputNome" id="inputNome">   
+                </p>
+                <p>
+                    <label for="inputAno">Ano de lançamento: </label>
+                    <input type="number" name="inputAno" id="inputAno">
+                </p>
+                <p>
+                    <label for="inputGenero">Gênero: </label>
+                    <input type="text" name="inputGenero" id="inputGenero">
+                </p>
+                <p>
+                  <button type="submit">Adicionar</button>  
+                </p>
+                
+            </form>
+        </div>
+        <div>
+            <ul id="cadastroDeJogos">
+
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>Criado e desenvolvido por Jonhy Alberto</p>
+    </footer>
+    <script type="module" src="lis04.js"></script>
+</body>
+</html>
