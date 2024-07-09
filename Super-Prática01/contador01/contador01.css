@@ -52,3 +52,7 @@ body section div p #btn{
     font-size: 1em;
     height: 28px;
 }
+
+footer {
+    background-color: dodgerblue;
+}
