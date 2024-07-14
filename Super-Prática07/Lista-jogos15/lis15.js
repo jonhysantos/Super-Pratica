@@ -5,7 +5,7 @@ function toKebabCase(str){
 function adicionarLi(jogo){
     const liElement = document.createElement('li');
     liElement.id = toKebabCase(jogo.nome);
-    liElement.innerHTML = `Nome: ${jogo.nome} <br> Ano de lançamento ${jogo.ano} <br> Gênero: ${jogo.genero}`
+    liElement.textContentL = `Nome: ${jogo.nome} <br> Ano de lançamento: ${jogo.ano} <br> Gênero: ${jogo.genero}`
     document.getElementById('ulElement').appendChild(liElement)
 }
 
