@@ -26,6 +26,6 @@ export function calcularDiasRestantes(dataNascimento){
 
     // Calcula a diferença e retorna em day
 
-    const diasRestantes = proximoAniversario.diff(hoje,"day")
+    const diasRestantes = proximoAniversario.diff(hoje,'day')
     return diasRestantes
 }
