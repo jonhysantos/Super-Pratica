@@ -7,6 +7,7 @@ function toKebabCase(str){
 }
 
 // Função para adiconar uma nova tarefa à lista
+
 function adicionarTarefa(event){
     event.preventDefault()
 
