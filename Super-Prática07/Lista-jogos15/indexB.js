@@ -1,24 +1,24 @@
 function toKebabCase(str){
-    str.split(' ').join('-').toLowerCase()
+    return str.split(' ').join('-').toLowerCase()
 }
 
 function adicionarLi(jogo){
-    const liElement = document.createElement('li');
-    liElement.id = toKebabCase(jogo.nome);
-    liElement.innerHTML = `Nome: ${jogo.nome} <br> Ano de lançamento: ${jogo.ano} <br> Gênero: ${jogo.genero}`
+    const liElment = document.createElement('li');
+    liElment.id = toKebabCase(jogo.nome);
+    liElment.innerHTML = `Nome: ${jogo.nome} <br> Ano de lançamento: ${jogo.ano} <br> Gênero: ${jogo.genero}`
 
-    document.getElementById('ulElement').appendChild(liElement)
+    document.getElementById('ulElement').appendChild(liElment)
 }
 
-const form = document.getElementById('cadastroJogos')
-form.addEventListener('submit',function(evento){
-    evento.preventDefault()
+const form = document.getElementById('cadastroJogos');
+form.addEventListener('submit',function(event){
+    event.preventDefault();
 
     const inputNome = document.getElementById('inputNome');
     const inputAno = document.getElementById('inputAno');
     const inputGenero = document.getElementById('inputGenero');
 
-    const jogo = {};
+    const jogo = {}
 
     jogo.nome = inputNome.value;
     jogo.ano = Number(inputAno.value);
@@ -26,5 +26,5 @@ form.addEventListener('submit',function(evento){
 
     adicionarLi(jogo);
 
-    evento.target.reset();
+    event.target.reset()
 })
