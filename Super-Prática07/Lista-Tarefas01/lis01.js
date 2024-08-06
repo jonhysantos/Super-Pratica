@@ -32,7 +32,7 @@ function adicionarTarefa(event){
         label.htmlFor = toKebabCase(textoTarefa);
         label.textContent = textoTarefa
 
-        novaTarefa.append(checkbox,label);
+        novaTarefa.append(checkbox,label)
 
         // Adicionar um botao de excluir a tarefa.
         const botaoExcluir = document.createElement('button');
