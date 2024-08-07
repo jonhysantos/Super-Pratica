@@ -1,47 +1,47 @@
 const formTarefa = document.getElementById('formTarefa');
 formTarefa.addEventListener('submit',adicionarTarefa);
 
-// Reaproveitando a função da aula anterior
+// Reaproveitando a função da aula.
 function toKebabCase(str){
     return str.split(' ').join('-').toLowerCase()
 }
 
-// Função para adiconar uma nova tarefa à lista
+// Adiciona uma nova tarefa na lista de tarefas.
 function adicionarTarefa(event){
-    event.preventDefault()
+    event.preventDefault();
 
     const inputTarefa = document.getElementById('inputTarefa');
-    const textoTarefa = inputTarefa.value;
+    const textoTarefa = inputTarefa.value
 
-    if(textoTarefa !== ""){
+    if(textoTarefa !== ''){
+        // Salva a lista e o li como listaTarefas e novaTarefa
         const listaTarefas = document.getElementById('ulElement');
         const novaTarefa = document.createElement('li');
 
-        // Cria um input de checkbox para marcar como concluído.
-
-        const checkbox = document.createElement('input');
-        checkbox.id = toKebabCase(textoTarefa);
-        checkbox.type = "checkbox";
-        checkbox.addEventListener("change",function(){
+        // Cria um input do tipo checkox para marcar como concluido.
+        const checkox = document.createElement('input');
+        checkox.id = toKebabCase(textoTarefa);
+        checkox.type = 'checkbox'
+        checkox.addEventListener('change',function(){
             novaTarefa.classList.toggle('concluido');
         });
 
-        // Cria uma label com a tarefa
+        // Cria um label com a tarefa.
         const label = document.createElement('label');
         label.htmlFor = toKebabCase(textoTarefa);
         label.textContent = textoTarefa
 
-        novaTarefa.append(checkbox,label)
+        novaTarefa.append(checkox,label);
 
-        // Adicionar um botao de excluir a tarefa.
+        // Adiciona um botão de Excluir na nova tarefa.
         const botaoExcluir = document.createElement('button');
         botaoExcluir.textContent = 'Excluir';
         botaoExcluir.addEventListener('click',function(){
             novaTarefa.remove();
-        });
-        listaTarefas.appendChild(novaTarefa);
-        novaTarefa.appendChild(botaoExcluir);
-        inputTarefa.value = ''
+        })
 
+        novaTarefa.appendChild(botaoExcluir);
+        listaTarefas.appendChild(novaTarefa);
+        inputTarefa.value = ''
     }
 }
