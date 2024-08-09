@@ -2,7 +2,7 @@ const formTarefa = document.getElementById('formTarefa');
 formTarefa.addEventListener('submit',adicionarTarefa);
 
 // Reaproveitando a função da aula.
-function toKebabcase(str){
+function toKebabCase(str){
     return str.split(' ').join('-').toLowerCase()
 }
 
@@ -11,37 +11,36 @@ function adicionarTarefa(event){
     event.preventDefault();
 
     const inputTarefa = document.getElementById('inputTarefa');
-    const textoTarefa = inputTarefa.value
+    const textoTarefa = inputTarefa.value;
 
     if(textoTarefa !== ""){
-        const listaTarefas = document.getElementById('ulElement');
+        const listaTarefa = document.getElementById('ulElement');
         const novaTarefa = document.createElement('li');
 
-        // Cria um input do tipo chekbox.
+        // Cria um input do tipo checkbox para marcar como concluído.
         const checkbox = document.createElement('input');
-        checkbox.id = toKebabcase(textoTarefa);
-        checkbox.type = 'checkbox'
+        checkbox.type = 'checkbox';
+        checkbox.id = toKebabCase(textoTarefa);
         checkbox.addEventListener('change',function(){
-            novaTarefa.classList.toggle('concluido')
+            novaTarefa.classList.toggle('concluido');
         });
 
-        // Cria uma label para a nova tarefa.
+        // Cria um label com a tarefa.
         const label = document.createElement('label');
-        label.htmlFor = toKebabcase(textoTarefa)
-        label.textContent = textoTarefa
+        label.htmlFor = toKebabCase(textoTarefa);
+        label.textContent = textoTarefa;
 
-        novaTarefa.append(checkbox,label)
+        novaTarefa.append(checkbox,label);
 
-        // adiciona um botão de excluir na nova tarefa.
+        // Adiciona um botão de excluir na nova tarefa.
         const botaoExcluir = document.createElement('button');
-        botaoExcluir.textContent = 'Excluir'
+        botaoExcluir.textContent = 'Excluir';
         botaoExcluir.addEventListener('click',function(){
             novaTarefa.remove();
         });
 
-        listaTarefas.appendChild(novaTarefa);
         novaTarefa.appendChild(botaoExcluir);
+        listaTarefa.appendChild(novaTarefa);
         inputTarefa.value = ''
-        
     }
 }
