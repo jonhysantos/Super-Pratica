@@ -23,7 +23,7 @@ form.addEventListener('submit',function(event){
     jogo.ano = inputAno.value;
     jogo.genero = inputGenero.value;
 
-    adicionarli(jogo);
+    adicionarli(jogo)
 
     event.target.reset();
 })
