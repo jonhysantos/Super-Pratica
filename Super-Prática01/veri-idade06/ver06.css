@@ -33,7 +33,7 @@ body section div p input#txtn,#outro {
     width: 150px;
 }
 
-body section div p input#btn {
+body section div p #btn {
     width: 150px;
     height: 22px;
     font-size: 1em;
