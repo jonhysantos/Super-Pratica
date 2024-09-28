@@ -22,7 +22,7 @@ function mudarYellow(){
 }
 
 function mudarGreen(){
-    red.style.background = 'whhite'
+    red.style.background = 'white'
     yellow.style.background = 'white'
     green.style.background = '#00f400'
 }

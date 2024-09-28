@@ -1,1 +1,0 @@
-const formTarefa = document.getElementById('formTarefa')
