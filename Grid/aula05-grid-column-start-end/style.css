@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 10px; /*aplica tanto no row quanto no column linha coluna*/
+    grid-auto-rows: minmax(500px,auto);
+    
+}
+
+.space{
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.one{
+    background-color: #333459;
+    /*grid-column-start:1 ;
+    grid-column-end:3;  aplica nos itens*/
+    grid-column: 1/4;
+}
+
+.two{
+    background-color: #259b11;
+}
+
+.three {
+    background-color: #800534;
+}
+
+.four {
+    background-color: #0c8f9b;
+}
+
+.five {
+    background-color: #ff0a0a;
+}
+
+.six {
+    background-color: aqua;
+}
+
+.seven {
+    background-color: blueviolet;
+}
+
+.eight {
+    background-color: cornflowerblue;
+}
+
+.nine {
+    background-color: darkgoldenrod;
+}
