@@ -2,42 +2,42 @@ import {games} from './products.js'
 
 const btnShowAll = document.querySelector('.show-all');
 const list = document.querySelector('ul');
-const btnMapAll = document.querySelector('.map-all')
+const btnMapAll = document.querySelector('.map-all');
 const btnSumAll = document.querySelector('.sum-all');
 const btnFilterAll = document.querySelector('.filter-all');
 
-function currencyFormat(value){
+
+function currencyForamt(value){
     const real = value.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
     return real
 }
 
 function showAll(arrayProduct){
-    let myli = ''
+    let myLi = ''
     arrayProduct.forEach(product => {
-        myli += `
+        myLi += `
             <li>
                 <img src=${product.src}>
                 <p>${product.name}</p>
-                <p class="item-price">${currencyFormat(product.price)}</p>
+                <p class="item-price">${currencyForamt(product.price)}</p>
             </li>
         `
     })
-
-    list.innerHTML = myli
+    list.innerHTML = myLi
 }
 
 function mapAll(){
-    const newPrice = games.map(product => ({
+    const newPrices = games.map((product => ({
         ...product,
         price:product.price * 0.43
-    }))
-    showAll(newPrice)
+    })))
+    showAll(newPrices)
 }
 
 function sumAll(){
     const total = games.reduce((acc,curr) => acc + curr.price,0)
-    list.innerHTML = `O valor total é de ${currencyFormat(total)}`
-    list.style.fontSize = '2em'
+    list.innerHTML = `O valor total de todos os itens é de ${currencyForamt(total)}`
+    list.style.fontSize = "2em"
 }
 
 function filterAll(){
@@ -45,7 +45,7 @@ function filterAll(){
     showAll(justHorror)
 }
 
-btnShowAll.addEventListener('click',() => showAll(games))
-btnMapAll.addEventListener('click',mapAll)
+btnShowAll.addEventListener('click',() => showAll(games));
+btnMapAll.addEventListener('click',mapAll);
 btnSumAll.addEventListener('click',sumAll)
 btnFilterAll.addEventListener('click',filterAll)
