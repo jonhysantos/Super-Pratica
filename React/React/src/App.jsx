@@ -1,6 +1,11 @@
 
 
 function App() {
+
+  const list =  [
+    {id:233888894,task:'Levar o Pitoco para passear',},
+    {id:234345,task:'Estudar react'},
+  ]
   function inputMudou(event){
     console.log(event.target.value)
   }
@@ -14,8 +19,11 @@ function App() {
         <input onChange={inputMudou} placeholder='Digite o que devo fazer...' />
         <button onClick={cliqueiNoBotao}>Adicionar</button>
         <ul>
-          <li>Fazer tarefa de react</li>
-          <li>Estudar sobre grid</li>
+          {
+            list.map(item => (
+             <li key={item.id}>{item.task}</li>
+            ))
+          }
         </ul>
 
         </div>
