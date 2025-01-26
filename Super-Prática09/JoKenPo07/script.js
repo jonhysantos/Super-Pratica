@@ -1,4 +1,8 @@
 const result = document.querySelector('.result');
+const humanScore = document.querySelector('#human-score');
+const machineScore = document.querySelector('#machine-score');
+let machineP = 0;
+let humanP = 0;
 const GAME_OPTIONS = {
     ROCK: 'rock',
     PAPER: 'paper',
@@ -23,7 +27,11 @@ const playGame = (human, machine) => {
         || (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER)
     ) {
         result.innerHTML = "Você ganhou"
+        humanP ++
+        humanScore.innerHTML = humanP
     }else{
         result.innerHTML = "Você perdeu para a Alexa"
+        machineP ++
+        machineScore.innerHTML = machineP
     }
 }
