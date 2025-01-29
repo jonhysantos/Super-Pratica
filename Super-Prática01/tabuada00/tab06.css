@@ -30,16 +30,16 @@ body section div p {
     padding: 5px;
 }
 
-body section div p input#txtn {
+.txtn {
     width: 80px;
 }
 
-body section div p #btn {
+.btn {
     width: 150px;
 
 }
 
-body section div#res p select#tabuada {
+.tabuada {
     width: 250px;
     padding: 10px;
     font-size: 1.3em;
