@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista de filmes</title>
-    <link rel="stylesheet" href="cont06.css">
+    <title>Verificador de idade.</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
@@ -13,21 +13,22 @@
     </header>
     <section>
         <div>
-            <h2>Super contador</h2>
+            <h2>Verificador de idade</h2>
             <p>
-                <label for="txtb">Início: </label>
-                <input type="number" name="txti" class="txtb">
+                <label for="txtano">Ano de nascimento: </label>
+                <input type="number" name="txtano" class="txt-ano">
+            </p>
+            <h2>Sexto:</h2>
+            <p>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="sex-choice" class="mas">
             </p>
             <p>
-                <label for="txte">Fim: </label>
-                <input type="number" name="txtf" class="txte">
+                <label for="fem">Feminino</label>
+                <input type="radio" name="sex-choice" class="fem" checked>
             </p>
             <p>
-                <label for="txts">Passo: </label>
-                <input type="number" name="txtp" class="txts">
-            </p>
-            <p>
-                <button class="btn">Contar</button>
+                <button class="btn">Calcular</button>
             </p>
         </div>
         <div class="res">

@@ -19,8 +19,9 @@ body section div {
     background-color: #ff1493;
     color: white;
     padding: 10px;
-    margin: 20px;
-    border-radius: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.319);
     filter: drop-shadow(0 0 2em #ff1493);
 }
 
@@ -29,15 +30,19 @@ body section div p {
     padding: 5px;
 }
 
-body section div p input#txtn,#outro {
-    width: 150px;
+.txtn {
+    width: 80px;
 }
 
-body section div p #btn {
+.btn {
     width: 150px;
-    height: 22px;
-    font-size: 1em;
-    border-radius: 5px;
+
+}
+
+.tabuada {
+    width: 250px;
+    padding: 10px;
+    font-size: 1.3em;
 }
 
 body footer {

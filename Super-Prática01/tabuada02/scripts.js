@@ -1,22 +1,22 @@
 const num = document.querySelector('.txtn');
-const res = document.querySelector('.res');
 const btn = document.querySelector('.btn');
 const tab = document.querySelector('.tabuada');
+let res = document.querySelector('.res');
 
-function seeTab(){
+const seeTab = () => {
     if(num.value.length == 0){
-        alert('Por favor deigite um número para ver a tabuada')
+        alert('faltam dados')
     }else{
         tab.innerHTML = ''
         let n = Number(num.value);
         for(let c = 1; c <= 10; c ++){
-            let item = document.createElement('option');
-            item.text = `${n} x ${c} = ${n * c}`
-            tab.appendChild(item)
+            let option = document.createElement('option');
+            option.innerHTML = `${n} x ${c} = ${n * c} `
+            tab.appendChild(option)
         }
-        num.value = ''
-        num.focus()
     }
+    num.value = ''
+    num.focus()
 }
 
 btn.addEventListener('click',seeTab)

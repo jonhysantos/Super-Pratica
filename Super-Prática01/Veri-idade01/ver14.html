@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de idade.</title>
-    <link rel="stylesheet" href="../veri-idade07/ver08.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
@@ -16,28 +16,28 @@
             <h2>Verificador de idade</h2>
             <p>
                 <label for="txtano">Ano de nascimento: </label>
-                <input type="number" name="txtano" id="txtano">
+                <input type="number" name="txtano" class="txtano">
             </p>
             <h2>Sexto:</h2>
             <p>
                 <label for="mas">Masculino</label>
-                <input type="radio" name="radSex" id="mas">
+                <input type="radio" name="sex-choice" class="mas">
             </p>
             <p>
                 <label for="fem">Feminino</label>
-                <input type="radio" name="radSex" id="fem" checked>
+                <input type="radio" name="sex-choice" class="fem" checked>
             </p>
             <p>
-                <button id="btn">Calcular</button>
+                <button class="btn">Calcular</button>
             </p>
         </div>
-        <div id="res">
+        <div class="res">
 
         </div>
     </section>
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="ver14.js"></script>
+    <script type="module" src="scripts.js"></script>
 </body>
 </html>
