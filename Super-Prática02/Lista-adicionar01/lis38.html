@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista de filmes</title>
-    <link rel="stylesheet" href="../desconto15/des15.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,26 +13,28 @@
     </header>
     <section>
         <div>
-            <h2>Calculadora de desconto (%)</h2>
+            <h2>Adicione números entre 1 e 100</h2>
             <p>
-                <label for="txtp">Preço: </label>
-                <input type="number" name="txtp" id="txtp">
+                <label for="txt-number">Número:</label>
+                <input type="number" name="txtn" id="txt-number">
+                <button class="btn-add">Adicionar</button>
             </p>
             <p>
-                <label for="txtd">Desconto -(%)</label>
-                <input type="number" name="txtd" id="txtd">
+                <select name="list" class="list" size="7">
+
+                </select>
             </p>
             <p>
-                <button id="btn">Calcular</button>
+                <button class="btn-finish">Finalizar</button>
             </p>
         </div>
-        <div id="res">
-            
+        <div class="res">
+
         </div>
     </section>
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="des28.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

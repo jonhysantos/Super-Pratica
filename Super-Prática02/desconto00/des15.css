@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
     box-sizing: border-box;
+    text-align: center;
 }
 
 body header {
@@ -18,11 +18,14 @@ body header {
 body section div {
     background-color: #ff1493;
     color: white;
-    padding: 15px;
-    margin: 20px;
+    padding: 10px;
+    margin: 15px;
     border-radius: 15px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.474);
     filter: drop-shadow(0 0 2em #ff1493);
+}
+
+body section div h2 {
+    margin-bottom: 20px;
 }
 
 body section div p {
@@ -30,22 +33,17 @@ body section div p {
     padding: 5px;
 }
 
-body section div p input#txtp,#txtd {
+body section div p input#txt-price,#txt-descount {
     width: 100px;
-
 }
 
-body section div p input#btn {
+body section div p .btn {
     width: 150px;
-    height: 22px;
-    font-size: 1em;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
-
-
-body section div#res{
-    display: block;
+body section div.res {
+    display: none;
 }
 
 body footer {

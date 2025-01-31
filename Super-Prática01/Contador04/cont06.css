@@ -21,29 +21,24 @@ body section div {
     padding: 10px;
     margin: 15px;
     border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.367);
     filter: drop-shadow(0 0 2em #ff1493);
 }
 
-body section div h2 {
-    margin-bottom: 20px;
-}
-
 body section div p {
-    margin: 5px;
-    padding: 5px;
+    padding: 8px;
+    margin: 7px;
 }
 
-body section div p input#txtp,#txtd {
-    width: 100px;
+body section div p input.txtb,.txte,.txts {
+    width: 80px;
+    font-size: 1em;
 }
 
-body section div p #btn {
+body section div p .btn {
     width: 150px;
-    border-radius: 15px;
-}
-
-body section div#res {
-    display: block;
+    height: 22px;
+    font-size: 1em;
 }
 
 body footer {

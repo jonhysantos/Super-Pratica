@@ -1,18 +1,18 @@
-const date = new Date()
-const yearActual = date.getFullYear()
-const birthYear = document.querySelector('.txt-ano')
-const sex = document.getElementsByName('sex-choice')
+const date = new Date();
+const actualYear = date.getFullYear()
+const birthYear = document.querySelector('.txt-year');
+const sex = document.getElementsByName('sex-choice');
+const btn = document.querySelector('.btn');
 let res = document.querySelector('.res')
-const btn = document.querySelector('.btn')
 
-
-function howOld(){
+const calculator = () => {
     if(birthYear.value.length == 0){
-        alert('Digite o ano de nascimento')
+        alert('Faltam dados')
     }else{
+        let idade = Number(actualYear) - Number(birthYear.value)
         let genero = ''
-        let idade = Number(yearActual) - Number(birthYear.value)
         let foto = document.createElement('img')
+        foto.setAttribute('id','foto')
         if(sex[0].checked){
             genero = 'Homem'
             if(idade < 12){
@@ -28,8 +28,8 @@ function howOld(){
         }else if(sex[1].checked){
             genero = 'Mulher'
             if(idade < 12){
-              genero = 'Menina'
-              foto.setAttribute('src','./imagens/menina-f.png')  
+                genero = 'Menina'
+                foto.setAttribute('src','./imagens/menina-f.png')
             }else if(idade < 21){
                 foto.setAttribute('src','./imagens/jovem-f.png')
             }else if(idade < 45){
@@ -37,15 +37,11 @@ function howOld(){
             }else{
                 foto.setAttribute('src','./imagens/idosa-f.png')
             }
-            
         }
-        
-        res.innerHTML = `<p>Detectamos ${genero} que nasceu em ${birthYear.value} e em ${yearActual} completará ou já completou ${idade} anos.</p>`
+        res.innerHTML = `<p> Detectamos ${genero} que nasceu em ${birthYear.value} e em ${actualYear} completará ou já completou ${idade} anos</p>`
         res.appendChild(foto)
     }
-
-    
 }
 
-btn.addEventListener('click',howOld)
 
+btn.addEventListener('click',calculator);

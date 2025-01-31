@@ -11,21 +11,17 @@
 body header {
     background-color: dodgerblue;
     color: white;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 20px;
-}
-
-body section div h2 {
-    margin-bottom: 10px;
 }
 
 body section div {
     background-color: #ff1493;
     color: white;
     padding: 10px;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.28);
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.319);
     filter: drop-shadow(0 0 2em #ff1493);
 }
 
@@ -34,21 +30,19 @@ body section div p {
     padding: 5px;
 }
 
-body section div p select#lista {
-    width: 250px;
-    padding: 10px;
-    color: white;
-    background-color: dodgerblue;
-    border-radius: 10px;
-    margin: 10px;
-    font-size: 1.4em;
+.txtn {
+    width: 80px;
 }
 
-body section div p #btn,#btn2 {
+.btn {
     width: 150px;
-    height: 22px;
-    border-radius: 10px;
-    font-size: 1em;
+
+}
+
+.tab {
+    width: 250px;
+    padding: 10px;
+    font-size: 1.3em;
 }
 
 body footer {
