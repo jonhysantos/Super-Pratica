@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista de filmes</title>
-    <link rel="stylesheet" href="../veri-idade06/ver06.css">
+    <title>Verificador de idade.</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
@@ -13,31 +13,31 @@
     </header>
     <section>
         <div>
-            <h2>Verificador de idade.</h2>
+            <h2>Verificador de idade</h2>
             <p>
-                <label for="txtano">Ano de nascimento</label>
-                <input type="number" name="txtano" id="txtano">
+                <label for="txtano">Ano de nascimento: </label>
+                <input type="number" name="txtano" class="txt-ano">
             </p>
-            <h2>Sexo:</h2>
+            <h2>Sexto:</h2>
             <p>
                 <label for="mas">Masculino</label>
-                <input type="radio" name="radSex" id="mas" checked>
+                <input type="radio" name="sex-choice" id="mas">
             </p>
             <p>
                 <label for="fem">Feminino</label>
-                <input type="radio" name="radSex" id="fem">
+                <input type="radio" name="sex-choice" id="fem" checked>
             </p>
             <p>
-                <button id="btn">Verificador</button>
+                <button class="btn">Calcular</button>
             </p>
         </div>
-        <div id="res">
+        <div class="res">
 
         </div>
     </section>
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="veri15.js"></script>
+    <script type="module" src="scripts.js"></script>
 </body>
 </html>
