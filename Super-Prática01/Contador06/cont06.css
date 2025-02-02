@@ -11,7 +11,7 @@
 body header {
     background-color: dodgerblue;
     color: white;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
 }
 
@@ -20,29 +20,25 @@ body section div {
     color: white;
     padding: 10px;
     margin: 15px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.319);
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.367);
     filter: drop-shadow(0 0 2em #ff1493);
 }
 
 body section div p {
-    margin: 5px;
-    padding: 5px;
+    padding: 8px;
+    margin: 7px;
 }
 
-.txtn {
+body section div p input.txtb,.txte,.txts {
     width: 80px;
+    font-size: 1em;
 }
 
-.btn {
+body section div p .btn {
     width: 150px;
-
-}
-
-.tab {
-    width: 250px;
-    padding: 10px;
-    font-size: 1.3em;
+    height: 22px;
+    font-size: 1em;
 }
 
 body footer {
