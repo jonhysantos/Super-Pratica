@@ -1,10 +1,8 @@
-
-
-export function dobro(n){
+export function doble(n){
     return n * 2
 }
 
-export function soma(n,n2){
+export function sum(n,n2){
     return n + n2
 }
 
