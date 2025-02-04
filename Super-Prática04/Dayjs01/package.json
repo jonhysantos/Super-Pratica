@@ -1,5 +1,5 @@
 {
-  "name": "dayjs26",
+  "name": "dayjs01",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.2.0"
+    "vite": "^6.0.5"
   },
   "dependencies": {
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.13"
   }
 }

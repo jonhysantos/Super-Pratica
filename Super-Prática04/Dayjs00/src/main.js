@@ -2,10 +2,11 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+import { calcAge, CalcDaysToGo } from '../function.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
+    <a href="https://vite.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
     </a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
@@ -20,18 +21,10 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
-import { calcularDiasRestantes,calcularIdade } from './funcoes.js'
+const dateBirthDay = prompt('Digite a data de nascimento no formato (AAAA-MM-DD):')
+const age = calcAge(dateBirthDay)
+const daysToGo = CalcDaysToGo(dateBirthDay)
+alert(`Você tem ${age} anos e restam ${daysToGo} para o seu próximo aniversário`)
 
-// Solicita a data ao usuário no formato (YYYY-MM-DD)
-const dataNascimento = prompt('Digite a data de nascimento (AAAA-MM-DD)')
-
-// Calcula a idade
-const idade = calcularIdade(dataNascimento)
-
-// Calcula quantos dias restam para o proximo aniversário
-const diasRestantes = calcularDiasRestantes(dataNascimento)
-
-// Exibe o resultado.
-alert(`Você tem ${idade} anos e restam ${diasRestantes} dias para o seu aniversário`)
 
 setupCounter(document.querySelector('#counter'))

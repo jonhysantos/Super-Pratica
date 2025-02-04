@@ -1,63 +1,61 @@
-import { soma,dobro,subtrair } from "./function.js"
+import { doble,sum,sub } from "./functions.js";
 
-function mostrarMenu(){
-    let opcao = parseFloat(prompt('Escolha uma opção: 1.Ver o dobro de um número\n 2.Somar dois números\n3.Subtrair dois números\n 4.Sair'))
-    return parseFloat(opcao)
+function showMenu(){
+    let option = parseFloat(prompt('Escolha uma opção:\n1.Ver o dobro de um número.\n.2.Ver a soma de dois números.\n3.Subtrair dois números.\n4.Sair'))
+    return parseFloat(option)
 }
 
-function verDobro(){
-    const n = parseFloat(prompt('Digite um número para ver o seu dobro:'))
+function calcDoble(){
+    const n = parseFloat(prompt('Digite um número para ver seu dobro'));
     if(isNaN(n)){
-        alert('Por favor digite um número')
-        return
+        alert('Digite um número')
+    }else{
+        const result = doble(n)
+        alert(`O dobro de ${n} = ${result}`)
     }
-        const result = dobro(n)
-        alert(`O dobro de ${n} é = ${result}`)
 }
 
-function verSubtracao(){
-    const n = parseFloat(prompt('Digite o primeiro número:'));
-    const n2 = parseFloat(prompt('Digite o segundo número'));
+function calcSum(){
+    const n = parseFloat(prompt('Digite o primeiro Número:'));
+    const n2 = parseFloat(prompt('Digite o segundo número:'));
     if(isNaN(n) || isNaN(n2)){
-        alert('Favor preencher os campos')
-        return
+        alert('Não é um número')
+    }else{
+        const result = sum(n,n2)
+        alert(`Somando ${n} - ${n2} = ${result} `)
     }
-        const result = subtrair(n,n2)
-        alert(`Subtraindo ${n} - ${n2} é = a ${result}`)
 }
 
-function verSoma(){
-    const n = parseFloat(prompt('Digite o primeiro número:'));
-    const n2 = parseFloat(prompt('Digite o segundo número'));
+function calcSub(){
+    const n = parseFloat(prompt('Digite o primeiro Número:'));
+    const n2 = parseFloat(prompt('Digite o segundo número:'));
     if(isNaN(n) || isNaN(n2)){
-        alert('Favor preencher os campos')
-        return
+        alert('Não é um número')
+    }else{
+        const result = sub(n,n2)
+        alert(`Somando ${n} + ${n2} = ${result} `)
     }
-    const result = soma(n,n2)
-    alert(`Somando ${n} + ${n2} = ${result}`)
 }
 
-let escolha 
+let choice 
 
 do{
-    escolha = mostrarMenu()
-    switch(escolha){
+    choice = showMenu()
+    switch(choice){
         case 1:
-            verDobro()
+            calcDoble()
             break
         case 2:
-            verSoma()
+            calcSum()
             break
         case 3:
-            verSubtracao()
+            calcSub()
             break
         case 4:
-            alert('Saindo....')
+            alert('SAindo...')
             break
         default:
-            alert('Opção inválida tente novamente!')
+            alert('Opção inválida,tente novamente')
     }
 
-
-}while(escolha !== 4)
-
+}while(choice !== 4)
