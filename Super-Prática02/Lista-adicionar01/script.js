@@ -1,41 +1,42 @@
 const num = document.querySelector('#txt-number');
+const btnAdd = document.querySelector('.btn-add');
 const list = document.querySelector('.list');
-const btn = document.querySelector('.btn-add');
-const btnFinish = document.querySelector('.btn-finish')
-const res = document.querySelector('.res');
+const btnFinish = document.querySelector('.btn-finish');
 const valores = []
+const res = document.querySelector('.res')
 
-function isNum(n){
-    if(Number(n) >= 1 && Number(n) <= 100){
+function isnum(n){
+    if(Number(n) <= 100 && Number(n) >= 1){
+        return true
+    }else{
+        return false
+    }
+}
+
+function inList(n,l){
+    if(l.indexOf(Number(n)) !== -1){
         return true
     }else {
         return false
     }
 }
 
-function inList(n,l){
-    if(l.indexOf(Number(n)) !== - 1){
-        return true
-    }else{
-        return false
-    }
-}
-
 function add(){
-    if(isNum(num.value) && !inList(num.value,valores)){
+    if(isnum(num.value) && !inList(num.value,valores)){
         valores.push(Number(num.value))
-        const item = document.createElement('option')
-        item.innerHTML = `${num.value} Adicionado`
+        let item = document.createElement('option')
+        item.innerHTML = `${num.value} adicionado`
         list.appendChild(item)
-        res.innerHTML = ''
-        num.focus()
         num.value = ''
+        num.focus()
+        res.innerHTML = ''
+        
     }else{
-        alert('Numero inválido ou já consta em lista')
+        alert('Numbero invalido')
     }
 }
 
-btn.addEventListener('click',add)
+btnAdd.addEventListener('click',add)
 
 function finish(){
     if(valores.length == 0){
@@ -44,8 +45,8 @@ function finish(){
         let total = valores.length
         let maior = valores[0]
         let menor = valores[0]
-        let soma = 0;
-        let media = 0;
+        let soma = 0
+        let media = 0
         for(let pos in valores){
             soma += valores[pos]
             if(valores[pos] > maior)
@@ -59,7 +60,6 @@ function finish(){
         res.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
         res.innerHTML += `<p>Somando todos os valores temos ${soma}</p>`
         res.innerHTML += `<p>A media de todos os valores somando é de ${media}</p>`
-
     }
 }
 

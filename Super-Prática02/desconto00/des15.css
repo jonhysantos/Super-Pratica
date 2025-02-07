@@ -43,7 +43,7 @@ body section div p .btn {
 }
 
 body section div.res {
-    display: none;
+    display: block;
 }
 
 body footer {

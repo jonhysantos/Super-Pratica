@@ -1,12 +1,12 @@
 const be = document.querySelector('.txtb');
 const en = document.querySelector('.txte');
 const st = document.querySelector('.txts');
-const btn = document.querySelector('.btn');
 const res = document.querySelector('.res');
+const btn = document.querySelector('.btn');
 
-function  caounter(){
+function counter(){
     if(be.value.length == 0 || en.value.length == 0 || st.value.length == 0){
-        alert('Preencha todos os campos')
+        alert('Por favor preencha os dados')
     }else{
         const b = Number(be.value);
         const e = Number(en.value);
@@ -26,4 +26,4 @@ function  caounter(){
     }
 }
 
-btn.addEventListener('click',caounter)
+btn.addEventListener('click',counter)
