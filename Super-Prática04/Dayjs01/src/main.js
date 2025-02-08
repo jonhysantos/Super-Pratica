@@ -21,9 +21,9 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
-const date = prompt(`Digite a data de nascimento no formato (AAAA-MM-DD)`)
-const age = calcAge(date)
-const dayGo = calcDays(date)
-alert(`Você tem ${age} anos e restam ${dayGo} dias para o seu aniversário`)
+const dateBorn = prompt('Digite a data de nascimento no formato (AAAA-MM-DD)')
+const age = calcAge(dateBorn)
+const daysLeft = calcDays(dateBorn)
+alert(`Você tem ${age} anos e restam ${daysLeft} dias para o seu aniversário`)
 
 setupCounter(document.querySelector('#counter'))

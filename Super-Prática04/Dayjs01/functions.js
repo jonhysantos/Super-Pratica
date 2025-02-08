@@ -1,22 +1,27 @@
 import dayjs from "dayjs";
 
 export function calcAge(dateBorn){
+    // Salva a data de hoje e a de nascimento no formato dayjs
     const today = dayjs()
-    const birthYear = dayjs(dateBorn)
+    const born = dayjs(dateBorn)
 
-    const age = today.diff(birthYear,'year')
+    // Calcula a diferença em anos e retorn a idade
+    const age = today.diff(born,'year');
     return age
+
 }
 
 export function calcDays(dateBorn){
     const today = dayjs()
-    const birthYear = dayjs(dateBorn)
-
-    let nextAniversary = birthYear.year(today.year())
+    const born = dayjs(dateBorn)
+    
+    // Altera a data de nascimento para a data de hoje
+    let nextAniversary = born.year(today.year())
+    // se o aniversario do ano atual ja passou acrescentar um ano na data
     if(nextAniversary.isBefore(today)){
-        nextAniversary += add(1,'year')
+        nextAniversary = nextAniversary.add(1,'year')
     }
-    console.log(nextAniversary,today)
-    const daysToGo = nextAniversary.diff(today,'day')
-    return daysToGo
+
+    const dayToLeft = nextAniversary.diff(today,'day')
+    return dayToLeft
 }
