@@ -1,4 +1,4 @@
-export function doble(n){
+export function dobble(n){
     return n * 2
 }
 

@@ -2,7 +2,7 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import { calcAge, calcDays } from '../functions.js'
+import { caclDay, calcAge } from '../functions.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,9 +21,9 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
-const dateBorn = prompt('Digite a data de nascimento no formato (AAAA-MM-DD)')
-const age = calcAge(dateBorn)
-const daysLeft = calcDays(dateBorn)
-alert(`Você tem ${age} anos e restam ${daysLeft} dias para o seu aniversário`)
+const date = prompt('Digite a data de nascimento no formato (AAAA-MM-DD)')
+const age = calcAge(date)
+const days = caclDay(date)
+alert(`Você tem ${age} anos e restam ${days} dias para o seu aniversário`)
 
 setupCounter(document.querySelector('#counter'))
