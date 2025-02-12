@@ -28,6 +28,37 @@ function listarItens(){
     alert(`Itens no estoque. \n ${itensStrings}`)
 }
 
+function alterarQuantidade(){
+    listarItens()
+    const indice = parseInt(prompt(`Digite o número do item qu deseja alterar a quantidade:`)) - 1
+    if(isNaN(indice) || indice < 0 || indice >= estoque.length){
+        alert('Quantidade inválida.')
+        return
+    }
+
+    const novaQuantidade = parseInt(prompt(`Digite a nova quantidade para ${estoque[indice].nome}:`))
+    if(isNaN(novaQuantidade) || novaQuantidade < 0){
+        alert('Nova quantidade inválida')
+        return
+    }
+
+    estoque[indice].quantidade = novaQuantidade
+    alert(`${estoque[indice].nome} Agora posuui ${novaQuantidade} unidades`)
+}
+
+function excluirItem(){
+    listarItens()
+    const indice = parseInt(prompt(`Digite o número do item qu deseja excluir do estoque:`)) - 1
+    if(isNaN(indice) || indice < 0 || indice >= estoque.length){
+        alert('Quantidade inválida.')
+        return
+    }
+
+    const nomeItemExcluido = estoque[indice].nome
+    estoque.splice(indice,1)
+    alert(`${nomeItemExcluido} foi excluído do estoque.`)
+}
+
 let escolha
 
 while(escolha !== "5"){
@@ -38,6 +69,11 @@ while(escolha !== "5"){
             break
         case "2":
             listarItens()
+            break
+        case "3":
+            alterarQuantidade()
+        case "4":
+            excluirItem()
             break
         case "5":
             alert('Saindo do program de gerenciamento de estoque.')
