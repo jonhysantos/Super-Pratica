@@ -1,23 +1,26 @@
 const price = document.querySelector('#txt-price');
-const desc = document.querySelector('#txt-descount');
-const res = document.querySelector('.res')
+const descount = document.querySelector('#txt-descount');
 const btn = document.querySelector('.btn')
+const res = document.querySelector('.res')
 
+function currencyReal(value){
+    const real = value.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
+    return real
+}
 
-function calcDesc(){
-    if(price.value.length == 0 || desc.value == 0){
-        alert('Por favor preencha os campos')
+function calcDescount(){
+    if(price.value.lenght === 0 || descount.value.lenght === 0 ){
+        alert(`Faltam dados`)
     }else{
-        const p = Number(price.value);
-        const des = Number(des.value);
-        const descount = (des /100) * p
-        const priceWithDescount = p - des
+        const p = Number(price.value)
+        const des = Number(descount.value)
+        const getDescount = (des/100) * p
+        const priceFinal = p - getDescount
         res.style.display = 'block'
-        res.innerHTML = `<p>Preço ${p}</p>`
-        res.innerHTML += `<p>Desconto - ${descount}</p>`
-        res.innerHTML += `<p>Preço com desconto ${priceWithDescount} </p>`
-        
+        res.innerHTML = `<p>Preço ${currencyReal(p)}</p>`
+        res.innerHTML += `<p>Desconto - ${currencyReal(getDescount)}</p>`
+        res.innerHTML += `<p>Preço com desconto ${currencyReal(priceFinal)}</p>`
     }
 }
 
-btn.addEventListener('click',calcDesc)
+btn.addEventListener('click',calcDescount)

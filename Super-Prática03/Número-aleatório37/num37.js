@@ -1,25 +1,23 @@
-const numeroAleatorio = Math.floor(Math.random() * 100) + 1
+const numRandom = Math.floor(Math.random() * 100) + 1
 
-let tentativas = 0;
-const maxTentativas = 10
+const maxTries = 10;
+let tries = 0
 
-for(tentativas = 1; tentativas <= maxTentativas; tentativas++){
-    let palpite = parseInt(prompt(`Tentativas ${tentativas} / ${maxTentativas} Adivinhe o número entre 1 e 100.`));
-    if(isNaN(palpite) || palpite <= 0 || palpite > 100){
-        alert('numero inválido');
-        tentativas --
-
-    }else if(palpite === numeroAleatorio){
-        alert(`Parabéns! você acertou o número ${numeroAleatorio} em ${tentativas} tentativas.`);
+for(tries = 1; tries <= 10; tries ++){
+    const guess = parseInt(prompt(`Tentativa ${tries} / ${maxTries}. Adivinhe o número entre 1 e 100`))
+    if(guess < 0 || guess > 100 || isNaN(guess)){
+        alert(`Não e um numero entre 1 e 100`)
+        tries --
+    }else if(guess === numRandom){
+        alert(`Parabens! você acertou o número ${numRandom} em ${tries} tentativas`)
         break
-    }else if(palpite > numeroAleatorio){
-        alert('tente um número menor');
+    }else if(guess > numRandom){
+        alert('Tent um número menor')
     }else{
-        alert(`Tente um número maior`);
+        alert('Tente um número maior')
     }
+}
 
-    if(tentativas >= maxTentativas){
-        alert(`Suas ${maxTentativas} de ${maxTentativas} tentativas acabaram`)
-        break
-    }
+if(tries >= maxTries){
+    alert(`Suas ${maxTries} / ${maxTries} acabaram, o número era ${numRandom}, tente novamente`)
 }
