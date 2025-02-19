@@ -1,13 +1,9 @@
-// Obtem 0 botao e o paragrafo
-const paragraph = document.querySelector('.counter-paragraph');
-const btnCounter = document.querySelector('.btn-counter');
-let counterClick = 0;
+const p = document.querySelector('.p-count');
+const btn = document.querySelector('.btn')
 
-// Adiciona um ouvinte de evento ao botão
-btnCounter.addEventListener('click',function() {
-    counterClick ++
-    paragraph.textContent = `${counterClick} clique${counterClick !== 1 ? 's' :''}: `
+let counter = 0;
+
+btn.addEventListener('click',function(){
+    counter ++
+    p.textContent = `${counter} clique${counter !== 1 ? 's':''}`
 })
-
-// Operador ternário
-// condição : valor_caso_verdadeiro : valor_caso_falso

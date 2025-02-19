@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de filmes</title>
-    <link rel="stylesheet" href="lis09.css">
+    <title>lista de filmes</title>
+    <link rel="stylesheet" href="../Lista-filmes00/lis09.css">
 </head>
 <body>
     <header>
@@ -13,22 +13,25 @@
     </header>
     <section>
         <div>
-            <h2>Adicone a lista seus filmes preferido</h2>
+            <h2>Lista de filmes</h2>
             <p>
-                <label for="inputFilmes">Nome:</label>
-                <input type="text" name="inputFilmes" id="inputFilmes" placeholder="Nome do filme">
+                <label for="inputFilme">Nome do filme</label>
+                <input type="text" name="inputFilme" class="input-filme">
             </p>
             <p>
-                <button id="btn">Adicionar</button>
+                <button class="btn">Adicionar</button>
             </p>
+            
         </div>
-        <div id="res">
-            <ul id="lista"></ul>
+        <div>
+            <ul class="list">
+
+            </ul>
         </div>
     </section>
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="lis09.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
