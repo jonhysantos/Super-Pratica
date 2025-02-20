@@ -1,6 +1,6 @@
 const vehicle = {
-    model:"Carro",
-    passengers:[],
+    model:'Carro',
+    passengers: [],
     limitPassengers: 5,
     velocity: 0,
     addVelocity:function(acelerate){
@@ -10,46 +10,45 @@ const vehicle = {
     lessVelocity:function(desacelerate){
         if(this.velocity - desacelerate > 0){
             this.velocity -= desacelerate
-            alert(`A velocidade foi diminuída para ${this.velocity} km/h`)
+            alert(`A velocidade foi diminuida para ${this.velocity} km/h`)
         }else{
             this.velocity = 0
-            alert(`O veículo está parado`)
+            alert('O veiculo esta parado')
         }
     },
     addPassengers:function(person){
         if(this.velocity === 0 && this.passengers.length < this.limitPassengers){
             this.passengers.push(person)
-            alert(`${person} foi adicinado como passageiro(a)`)
-
+            alert(`${person} foi adicionado como passageiro`)
         }else if(this.velocity > 0){
-            alert(`Não é possível adicionar passageiros com o veiculo em movimento`)
+            alert(`Nao possivel com oveiculo em movimento`)
         }else{
-            alert('Limite de passageiros atingido')
+            alert('limite de psassageiros atingido')
         }
-    },
+    }
 }
 
 function showMenu(){
-    return prompt(`Modelo: ${vehicle.model}.\nPassageiros: ${vehicle.passengers.join(', ')}\nLimite de passageiros: ${vehicle.limitPassengers}\nVelocidade atual: ${vehicle.velocity} km/h.\n Escolha uma opção:\n1.Aumentar a velocidade.\n2.Diminuir a velocidade.\n3.Adicionar passageiros.\n4.Sair`)
+    return  prompt(`Modelo: ${vehicle.model}.\nPassageiros: ${vehicle.passengers.join(', ')}.\nLimite de passageiros: ${vehicle.limitPassengers}.\nVelocidade atual:${vehicle.velocity} km/h.\nEscolha uma opção:\n1.Aumentar a velocidade.\n2.Dimiuir a velocidade.\n3.Adicionar passagieros.\n4.Sair`)
 }
 
 while(true){
-    const choice = showMenu()
+    const choice = showMenu();
     switch(choice){
         case "1":
-            const acelerate = parseFloat(prompt("Digite a quantidade de aceleração:"))
+            const acelerate = parseInt(prompt('Digite a qauntidade de aceleração:'))
             vehicle.addVelocity(acelerate)
             break
         case "2":
-            const desacelerate = parseFloat(prompt('Digite a quantidade de desaceleração:'))
+            const desacelerate = parseInt(prompt('Digite a quantidade de desaceleração:'))
             vehicle.lessVelocity(desacelerate)
             break
         case "3":
-            const person = prompt('Digite o nome do passagiero')
+            const person = prompt('Digite o nome do passagiero:')
             vehicle.addPassengers(person)
             break
         case "4":
-            alert('Saindo....')
+            alert(`saindo...`)
             break
         default:
             alert('Opção inválida')
