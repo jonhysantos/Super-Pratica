@@ -1,14 +1,14 @@
 const inputFilme = document.querySelector('.input-filme');
 const btn = document.querySelector('.btn');
-const ulElement = document.querySelector('.list');
+const ulElement = document.querySelector('.ul-element')
 
-btn.addEventListener('click',function() {
-    const nomeFilme = inputFilme.value
-    if(nomeFilme !== ''){
+function addMovie(){
+    const newFilme = inputFilme.value
+    if(newFilme !== ''){
         const liElement = document.createElement('li');
-        liElement.textContent = nomeFilme
+        liElement.textContent = newFilme
         ulElement.appendChild(liElement);
-    }else{
-        alert('Por favor digite o nome do filme')
     }
-})
+}
+
+btn.addEventListener('click',addMovie)

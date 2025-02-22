@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista de filmes</title>
-    <link rel="stylesheet" href="cont06.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,21 +13,19 @@
     </header>
     <section>
         <div>
-            <h2>Super contador</h2>
+            <h2>Adicione números entre 1 e 100</h2>
             <p>
-                <label for="txti">Início: </label>
-                <input type="number" name="txti" class="txtb">
+                <label for="txt-n">Número:</label>
+                <input type="number" name="txtn" id="txt-n">
+                <button class="btn-add">Adicionar</button>
             </p>
             <p>
-                <label for="txtf">Fim: </label>
-                <input type="number" name="txtf" class="txte">
+                <select name="list" class="list" size="7">
+
+                </select>
             </p>
             <p>
-                <label for="txtp">Passo: </label>
-                <input type="number" name="txtp" class="txts">
-            </p>
-            <p>
-                <button class="btn">Contar</button>
+                <button class="btn-finish">Finalizar</button>
             </p>
         </div>
         <div class="res">
@@ -37,6 +35,6 @@
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="scripts.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
