@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefas</title>
     <link rel="stylesheet" href="style.css">
+    <title>lista de filmes</title>
 </head>
 <body>
     <header>
@@ -12,20 +12,23 @@
         <p>Desenvolvedor Front-end</p>
     </header>
     <section>
-        <form id="formTarefa">
-            <h2>Lista de tarefas</h2>
+        <h2>lista de tarefa a fazer</h2>
+        <form id="formToDoList">
             <p>
-                <input type="text" name="inputTarefa" id="inputTarefa" placeholder="Adicionar nova tarefa">
-                <button type="submit">Adicionar tarefa</button>
+                <label for="input-to-do">Nova tarefa:</label>
+                <input type="text" name="input-to-do" class="input-to-do">
             </p>
+            <button type="submit">Adicionar</button>
         </form>
-    <ul id="ulElement">
+        <div class="hiddes">
+            <ul class="ulElement">
 
-    </ul>
+            </ul>
+        </div>
     </section>
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="lis01L.js"></script>
 </body>
+<script type="module" src="script.js"></script>
 </html>

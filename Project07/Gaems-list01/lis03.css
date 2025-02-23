@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "UTF";
 
 *{
     margin: 0;
@@ -11,40 +11,31 @@
 body header {
     background-color: dodgerblue;
     color: white;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
 body section div {
     background-color: #ff1493;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 15px;
     filter: drop-shadow(0 0 2em #ff1493);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
     color: white;
 }
 
-body section div h1 {
-    font-size: 2em;
-}
-
 body section div p {
-    margin: 7px;
-    padding: 7px;
-}
-
-body section div p label {
-    font-size: 1.5em;
+    margin: 5px;
+    padding: 5px;
 }
 
 body section div p button {
     width: 150px;
-    height: 28px;
+    height: 25px;
     font-size: 1em;
 }
 
-body footer {
+footer {
     background-color: dodgerblue;
     color: white;
-    padding: 2px;
 }

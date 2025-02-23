@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista de filmes</title>
-    <link rel="stylesheet" href="../Lista-Tarefas01/style.css">
+    <link rel="stylesheet" href="../movie-list00/lis09.css">
 </head>
 <body>
     <header>
@@ -13,16 +13,18 @@
     </header>
     <section>
         <div>
-            <h2>Lista de tarefas</h2>
-            <form id="formTarefa">
-                <p>
-                    <input type="text" name="inputTarefa" id="inputTarefa" placeholder="nova tarefa">
-                    <button id="submit">Adicionar</button>
-                </p>
-            </form>
+            <h2>Lista de filmes</h2>
+            <p>
+                <label for="inputFilme">Nome do filme</label>
+                <input type="text" name="inputFilme" class="input-filme">
+            </p>
+            <p>
+                <button class="btn">Adicionar</button>
+            </p>
+            
         </div>
-        <div id="res">
-            <ul id="ulElement">
+        <div>
+            <ul class="ul-element">
 
             </ul>
         </div>
@@ -30,6 +32,6 @@
     <footer>
         <p>Criado e desenvolvido por Jonhy Alberto</p>
     </footer>
-    <script type="module" src="lisB03.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
