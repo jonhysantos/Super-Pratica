@@ -1,4 +1,4 @@
-const formToDolist = document.getElementById('formToDoList');
+const formToDolist = document.getElementById('form-to-do');
 formToDolist.addEventListener('submit',toDo);
 
 function toKebabCase(str){
