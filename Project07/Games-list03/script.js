@@ -9,16 +9,16 @@ function addLi(game){
     document.getElementById('list-games').appendChild(liElement)
 }
 
-const form = document.getElementById('register-games');
+const form = document.getElementById('register-games')
 
-form.addEventListener('submit',function(event){
+form.addEventListener('submit',function(event) {
     event.preventDefault();
     const inputName = document.getElementById('input-name');
     const inputYear = document.getElementById('input-year');
-    const inputGenero = document.getElementById('input-genero')
+    const inputGenero = document.getElementById('input-genero');
 
-    if(inputName.value.length === 0 || inputYear.value.length === 0 || inputGenero.value.length == 0){
-        alert(`Favor preencher os campos necessários`)
+    if(inputName.value.length == 0 || inputYear.value.length == 0 || inputGenero.value.length == 0){
+        alert(`Preencha os requisitos`)
         return
     }
 
