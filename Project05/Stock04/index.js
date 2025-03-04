@@ -1,71 +1,70 @@
 const stock = []
 
-function registerProducts(){
+function addProduct(){
     const name = prompt('Digite o nome do produto:');
     const quantity = parseInt(prompt(`Digite a quantidade para ${name}:`))
 
-    // mesmo que {name:name,quantity:quantity}
-    const products = {name,quantity}
-    stock.push(products);
+    // Mesmo que {name:name,quantity:quantity
+    const product = {name,quantity}
+    stock.push(product)
     alert(`${name} foi cadastrado no estoque com ${quantity} unidades`)
 }
 
-function listProducts(){
+function seeProducts(){
     if(stock.length == 0){
         alert('O estoque está vazio')
         return
     }
 
-    // Transforma uma lista de strings em uma lista de objetos e depois junta tudo.
+    // Transforma uma lista de objetos em uma lista de strings e depois junta tudo
     const productsStrings = stock.map(function(item,index){
-        return `${index + 1} ${item.name}: ${item.quantity} unidades`
-    }).join('\n')
-    alert(`Produtos no estoque.\n ${productsStrings}`)
+        return `${index + 1} ${item.name}: ${item.quantity}`
+    }).join('\n');
+    alert(`Itens no estoque.\n ${productsStrings}`)
 }
 
 function changeQuantity(){
-    listProducts();
-    const indice = parseInt(prompt(`Digite o número do produto que deseja alterar a quantidade;`)) - 1
-    if(isNaN(indice) || indice < 0){
-        alert('Número do produto inválido')
+    seeProducts()
+    const indice = parseInt(prompt('Digite o número do produto que deseja altearar a quantidade:')) - 1
+    if(indice < 0 || isNaN(indice)){
+        alert('Quantidade inválida')
         return
     }
 
-    const newQuantity = parseInt(prompt(`Digite a nova quantidade para ${stock[indice].name}:`))
-    if(isNaN(newQuantity) || newQuantity < 0){
-        alert('Nova quantidade inválida')
+    const newQauntity = parseInt(prompt(`Digite a nova quantidade para ${stock[indice].name}:`))
+
+    if(isNaN(newQauntity) || newQauntity < 0){
         return
     }
 
-    stock[indice].quantity = newQuantity
-    alert(`${stock[indice].name} agora possui ${newQuantity} unidades`)
-
+    stock[indice].quantity = newQauntity
+    alert(`${stock[indice].name} Agora possui ${newQauntity}`)
 }
 
 function deleteProduct(){
-    listProducts();
-    const indice = parseInt(prompt(`Digite o número do produto que deseja alterar a quantidade;`)) - 1
-    if(isNaN(indice) || indice < 0){
-        alert('Número do produto inválido')
+    seeProducts()
+    const indice = parseInt(prompt('Digite o número do produto que deseja altearar a quantidade:')) - 1
+    if(indice < 0 || isNaN(indice)){
+        alert('Quantidade inválida')
         return
     }
 
     const productDeleted = stock[indice].name
-    stock.splice(indice,1);
-    alert(`"${productDeleted}" foi excluído do estoque.`)
+    stock.splice(indice,1)
+    alert(`"${productDeleted}" foi deletado do estoque`)
 }
 
-let choice
+let choice 
 
 while(choice !== "5"){
-    choice = prompt(`Escolha o que deseja fazer:\n1.Cadastrar novo produto.\n2.Ver produtos.\n3.Alterar a quantidade de algum produto.\n4.Excluir um produto.\n5.Sair`)
+    choice = prompt(`Escolha o que deseja fazer:\n1.Cadastrar um produto.\n2.Ver produtos em estoque.\n3.Alterar a quantidade.\n4.Excluir um produto.\n5.Sair`)
 
     switch(choice){
         case "1":
-            registerProducts();
+            addProduct()
             break
         case "2":
-            listProducts();
+            seeProducts();
             break
         case "3":
             changeQuantity();
@@ -77,6 +76,6 @@ while(choice !== "5"){
             alert('Saindo...')
             break
         default:
-            alert(`Opção inválida`)
+            alert('Opção inválida');
     }
 }
