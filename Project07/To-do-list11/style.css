@@ -1,0 +1,9 @@
+label {
+    margin: 0 .5rem;
+}
+
+.did{
+    color: #1f871f;
+    font-style: italic;
+    text-decoration: line-through;
+}

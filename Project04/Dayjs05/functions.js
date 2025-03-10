@@ -1,4 +1,4 @@
-import dayjs from "dayjs";
+import dayjs from "./node_modules/.vite";
 
 export function calcAge(dateBorn){
     // salva a data de hoje e a de nascimento no formato dayjs
