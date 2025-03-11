@@ -49,7 +49,7 @@ button {
   top: 2rem;
   right: 2rem;
   padding: 1rem 1.5rem;
-  transition: 0.8s;
+  transition: 0.9s;
 }
 
 .message.hidden {
