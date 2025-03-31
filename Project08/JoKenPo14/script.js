@@ -1,4 +1,5 @@
-
+const humanScore = document.getElementById('human-score');
+const machineScore = document.getElementById('machine-score');
 
 const result = document.querySelector('.result');
 const GAME_OPTIONS = {
