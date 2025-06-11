@@ -3,10 +3,6 @@ body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(#2a3e4d,#255c72);
-
-}
-
-.container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,6 +14,11 @@ svg{
     overflow: visible;
 }
 
+svg .shadow{
+    filter: url(#blur);
+    fill: #2a3e4d;
+    opacity: 0.4;
+}
 
 svg .core{
     fill: url(#gradient);
@@ -29,7 +30,7 @@ svg .core circle:first-child{
 }
 
 svg .ring ellipse {
-    stroke: #c600fd;
+    stroke: #00ddfd;
     stroke-width: 2px;
     fill: none;
     transform-origin: center;
@@ -45,7 +46,7 @@ svg .ring ellipse:nth-child(1){
 svg .ring ellipse:nth-child(3){
     stroke-dasharray: 0 230;
     animation-name: orbit;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     stroke-width: 7px;
@@ -55,7 +56,7 @@ svg .ring ellipse:nth-child(3){
 svg .ring ellipse:nth-child(4){
     stroke-dasharray: 0 230;
     animation-name: orbit;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-delay: -1.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -64,7 +65,7 @@ svg .ring ellipse:nth-child(4){
 }
 
 svg .ring:nth-child(2) ellipse{
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-direction: reverse;
 
 }
@@ -87,19 +88,4 @@ svg .ring:nth-child(3) ellipse:nth-child(3){
     100%{
         stroke-dashoffset: 230;
     }
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-.logo {
-    animation: logo-spin infinite 10s linear;
-  }
 }
