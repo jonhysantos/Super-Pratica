@@ -1,5 +1,6 @@
-const btn = document.getElementById('addToCart')
 
+
+const btn = document.getElementById('addToCart')
 
 btn.addEventListener('click',function(){
     const message = document.querySelector('.message')
@@ -7,5 +8,6 @@ btn.addEventListener('click',function(){
 
     setTimeout(function(){
         message.classList.add('hidden')
+
     },3 * 1000)
 })
