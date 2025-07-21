@@ -1,29 +1,32 @@
 function toKebabCase(str){
-    return str.split(' ').join('-').toLowerCase();
+    return str.split(' ').join('-').toLowerCase()
 }
+
 
 function addLi(game){
     const li = document.createElement('li');
     li.id = toKebabCase(game.name);
-    li.innerHTML = `Nome: ${game.name} <br> Ano de lançamento: ${game.year} <br> Genero: ${game.genero}`
+    li.innerHTML = `Nome:${game.name}`
     document.getElementById('list-games').appendChild(li)
 }
 
 const form = document.getElementById('register-games')
-form.addEventListener('submit',function(e){
-    e.preventDefault();
 
-    const inputName = document.getElementById('input-name');
-    const inputYear = document.getElementById('input-year');
-    const inputGenero = document.getElementById('input-genero');
 
-    const games = {}
+form.addEventListener('submit',function(event){
+    event.preventDefault()
+    const inputName = document.getElementById('input-name')
 
-    games.name = inputName.value
-    games.year = Number(inputYear.value)
-    games.genero = inputGenero.value
+    if(inputName.value.length == 0){
+        alert('Faltam dados')
+        return 
+    }
 
-    addLi(games)    
-    e.target.reset()
-    
+    const games = []
+    games.name = inputName.value 
+
+    addLi(games)
+    event.target.reset()
 })
+
+

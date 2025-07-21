@@ -5,7 +5,7 @@ function toKebabCase(str){
 function addLi(game){
     const liElement = document.createElement('li');
     liElement.id = toKebabCase(game.name);
-    liElement.innerHTML = `Nome: ${game.name}. <br> Ano de lançamento: ${game.year}. <br> Gênero: ${game.genero}.`
+    liElement.innerHTML = `Nome: ${game.name}.`
     document.getElementById('list-games').appendChild(liElement);
 }
 
@@ -15,10 +15,9 @@ form.addEventListener('submit',function(event){
     event.preventDefault();
 
     const inputName = document.getElementById('input-name');
-    const inputYear = document.getElementById('input-year');
-    const inputGenero = document.getElementById('input-genero');
 
-    if(inputName.value.length == 0 || inputYear.value.length == 0 || inputGenero.value.length == 0){
+
+    if(inputName.value.length == 0){
         alert(`Faltam dados`)
         return
     }
@@ -26,8 +25,7 @@ form.addEventListener('submit',function(event){
     const games = []
 
     games.name = inputName.value 
-    games.year = Number(inputYear.value)
-    games.genero = inputGenero.value
+
 
 
     addLi(games)
